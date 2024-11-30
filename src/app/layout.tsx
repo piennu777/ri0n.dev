@@ -19,7 +19,7 @@ export const metadata = {
     title: 'Rion',
     description: 'I am a student working as an engineer, doing web development and app development.',
     url: 'https://piennu777.jp',
-    siteName: 'Rion',
+    siteName: 'ri0n.dev',
     images: [
       {
         url: '/ogp.webp',
