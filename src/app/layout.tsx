@@ -14,11 +14,11 @@ export const metadata = {
     template: '%s / Rion'
   },
   description: 'I am a student working as an engineer, doing web development and app development.',
-  metadataBase: new URL('https://piennu777.jp'),
+  metadataBase: new URL('https://ri0n.dev'),
   openGraph: {
     title: 'Rion',
     description: 'I am a student working as an engineer, doing web development and app development.',
-    url: 'https://piennu777.jp',
+    url: 'https://ri0n.dev',
     siteName: 'ri0n.dev',
     images: [
       {
