@@ -1,9 +1,6 @@
-"use client";
-
-import Head from 'next/head';
 import Image from 'next/image';
 
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 
 import icon from "@/assets/images/icon.png";
 
@@ -11,70 +8,38 @@ import '@/assets/css/main.css';
 import '@/assets/css/header.css';
 import '@/assets/css/footer.css';
 
-const url = "https://piennu777.jp/";
-const favicon = "/favicon.png";
-const ogpIcon = "/ogp.webp";
-const siteName = "Rion";
-const description = "I am a student working as an engineer, doing web development and app development.";
-const metadata = {
-  title: "Rion",
-  description: "I am a student working as an engineer, doing web development and app development.",
+export const metadata = {
+  title: {
+    default: 'Rion',
+    template: '%s / Rion'
+  },
+  description: 'I am a student working as an engineer, doing web development and app development.',
+  metadataBase: new URL('https://piennu777.jp'),
   openGraph: {
-    title: siteName,
-    description,
-    url,
-    siteName,
-    locale: "ja-JP",
-    type: "website",
-    images: ogpIcon
+    title: 'Rion',
+    description: 'I am a student working as an engineer, doing web development and app development.',
+    url: 'https://piennu777.jp',
+    siteName: 'Rion',
+    images: [
+      {
+        url: '/ogp.webp',
+        width: 1200,
+        height: 630,
+      }
+    ],
+    locale: 'ja_JP',
+    type: 'website',
   },
-  icons: favicon,
-  verification: {
-    google: ""
+  icons: {
+    icon: '/favicon.png',
   },
-  publisher: `@piennu_777`,
-  robots: "index, follow",
-  creator: `@piennu_777`,
-  keywords: ['PIENNU', 'piennu', 'ぴえんぬ', 'ピエンヌ', 'piennu777', 'piennu777.jp', 'Rion', 'ri0n.dev', 'RION'],
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    fetch("https://piennu.instatus.com/summary.json")
-      .then(response => response.json())
-      .then((data: { page: { status: string } }) => {
-        const statusText = document.querySelector(".status") as HTMLElement;
-        const status = data.page.status;
-
-        if (statusText) {
-          if (status === "UNDERMAINTENANCE") {
-            statusText.textContent = "●  Currently Under Maintenance";
-            statusText.style.color = "#d88c00";
-          } else if (status === "UP") {
-            statusText.textContent = "●  All systems normal";
-            statusText.style.color = "#00d80b";
-          } else if (status === "HASISSUES") {
-            statusText.textContent = "●  An issue has occurred";
-            statusText.style.color = "#d80000";
-          } else {
-            statusText.textContent = "○  Unknown Status";
-            statusText.style.color = "#cccccc";
-          }
-        }
-      })
-      .catch(error => console.error("えらーw:", error));
-
-    document.addEventListener('contextmenu', (e: MouseEvent) => {
-      if ((e.target as HTMLElement).tagName === 'IMG') {
-        e.preventDefault();
-      }
-    });
-
-    document.querySelectorAll('img').forEach(img => {
-      img.ondragstart = () => false;
-    });
-  }, []);
-
   return (
     <html lang="en">
       <body>
@@ -95,9 +60,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
             <nav>
               <ul>
-                <li><a href="#Profile">Profile</a></li>
+                <li><a href="/#Profile">Profile</a></li>
                 <li><a href="/blog/">Blog</a></li>
-                <li><a href="#Projects">Projects</a></li>
+                <li><a href="/#Projects">Projects</a></li>
                 <li><a href="https://zisty.net/" target="_blank">Team</a></li>
               </ul>
             </nav>

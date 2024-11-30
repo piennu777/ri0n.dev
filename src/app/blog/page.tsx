@@ -11,6 +11,11 @@ import '@/assets/css/projects.css';
 
 import blogheader from "@/assets/images/wallpaperbetter.com_1920x1080 (4).jpg";
 
+export const metadata = {
+  title: 'Blog',
+  description: 'This is a blog maintained by Rion. We are posting at a leisurely pace.',
+}
+
 interface BlogProps {
   posts: Post[];
 }
@@ -19,10 +24,6 @@ export default async function Blog() {
   const posts = await getAllPosts();
   return (
     <>
-      <Head>
-        <title>Blog / Rion</title>
-      </Head>
-
       <main>
         <section className="blog" id="Blog">
           <div className="articles">

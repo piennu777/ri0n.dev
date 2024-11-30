@@ -523,7 +523,7 @@ export default function Home() {
           <p>These are the projects I am working on</p>
 
           <div className="projects-grid">
-            <a href="https://github.com/piennu777/piennu777.jp" target="_blank">
+            <a href="https://github.com/piennu777/ri0n.dev/" target="_blank">
               <div className="project">
                 <div className="icon">
                   <Image
@@ -534,9 +534,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="project-content">
-                  <h2><i className="bi bi-github"></i><br />piennu777.jp</h2>
+                  <h2><i className="bi bi-github"></i><br />ri0n.dev</h2>
                   <p>
-                    このWebsiteのソースコードがあります。HTML、CSS、Next.js、Vercelを使用して動作しています。
+                    このWebsiteのソースコードがあります。Next.js、Remark、React、Eslint、TypeScriptを使用して動作しています。
                   </p>
                 </div>
               </div>
