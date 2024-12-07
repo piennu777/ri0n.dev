@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-y: scroll;
+
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #c2c3bc;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #dbe6e3;
+}
+
+/* Contents */
+.contents {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.034) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.contents::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.027));
+    z-index: 0;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin: 30px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 1px solid #202224;
+    background: rgba(0, 0, 0, 0.151);
+    backdrop-filter: blur(2px);
+    padding: 5px 30px;
+    border-radius: 50px;
+}
+
+.sns-accounts a {
+    background: linear-gradient(to bottom, white, rgb(173, 173, 173));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    background: linear-gradient(to bottom, white, rgb(136, 136, 136));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: #cecece;
+}
+
+.icon img {
+    border-radius: 50%;
+    width: 35px;
+    margin-top: 5px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    border-top: 1px solid #141414;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 200px;
+}
+
+footer .footers {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .logo img {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+footer .logo .status {
+    color: #cccccc;
+}
+
+footer .nav {
+    display: flex;
+}
+
+footer .nav-category {
+    margin-left: 60px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #c0c0c0;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #818181;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .widget-embed.dark {
+    background-color: #000000;
+}
+
+@media (max-width: 913px) {
+    footer .footers {
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+    }
+
+    footer .logo {
+        order: -1;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    footer .nav {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    footer .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+
+    footer .nav-category {
+        margin-left: 0;
+        text-align: left;
+    }
+}
