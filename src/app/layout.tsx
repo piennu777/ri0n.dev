@@ -81,8 +81,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </ul>
             </nav>
             <div className="sns-accounts">
-              <a href="https://x.com/trion_zisty" aria-label="X" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
-              <a href="https://github.com/trion-dev" aria-label="Github" target="_blank"><i className="fa-brands fa-github"></i></a>
+              <a href="https://x.com/ri0n_dev" aria-label="X" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
+              <a href="https://github.com/ri0n-dev" aria-label="Github" target="_blank"><i className="fa-brands fa-github"></i></a>
               <a href="https://discord.com/users/851357394976899116" aria-label="Discord" target="_blank"><i
                 className="fa-brands fa-discord"></i></a>
             </div>
@@ -134,8 +134,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="nav-category">
                 <p>Social</p>
                 <ul>
-                  <li><a href="https://github.com/trion-dev" target="_blank"><i className="fa-brands fa-github"></i> Github</a></li>
-                  <li><a href="https://x.com/trion_zisty" target="_blank"><i className="fa-brands fa-x-twitter"></i> X</a></li>
+                  <li><a href="https://github.com/ri0n-dev" target="_blank"><i className="fa-brands fa-github"></i> Github</a></li>
+                  <li><a href="https://x.com/ri0n_dev" target="_blank"><i className="fa-brands fa-x-twitter"></i> X</a></li>
                   <li><a href="https://www.youtube.com/@piennu_777" target="_blank"><i className="fa-brands fa-youtube"></i> YouTube</a></li>
                   <li><a href="https://discord.com/users/851357394976899116" target="_blank"><i className="fa-brands fa-discord"></i> Discord</a>
                   </li>
